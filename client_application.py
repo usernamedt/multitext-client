@@ -10,7 +10,7 @@ from prompt_toolkit.key_binding.key_processor import KeyPressEvent
 try:
     import contextvars
 except ImportError:
-    import prompt_toolkit.eventloop.dummy_contextvars as contextvars  # type: ignore
+    import prompt_toolkit.eventloop.dummy_contextvars as contextvars
 
 
 class ClientApplication(Application):
@@ -43,4 +43,3 @@ class ClientApplication(Application):
                 key_bindings,
                 load_emacs_shift_selection_bindings()
             ])
-

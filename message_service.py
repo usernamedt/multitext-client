@@ -68,7 +68,7 @@ class MessageService:
                 packet = json.loads(message.decode("utf-8"))
                 if packet["type"] == "patch" and packet["content"] not in \
                         doc_editor.patch_set:
-                    await doc_editor.update_text(packet["content"])
+                    doc_editor.update_text(packet["content"])
                     doc_editor.patch_set.append(packet["content"])
                 if packet["type"] == "save_file_response":
                     self.app_state.is_saving = False

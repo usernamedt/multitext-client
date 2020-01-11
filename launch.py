@@ -240,7 +240,7 @@ class ClientLauncher:
 
         self.app_state.current_file_id = file_result["file_id"]
         for patch in file_result["content"]:
-            await self.doc_editor.update_text(patch)
+            self.doc_editor.update_text(patch)
             self.doc_editor.patch_set.append(patch)
 
         # send updates to server

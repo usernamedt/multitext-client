@@ -227,7 +227,7 @@ class DocumentEditor:
 
         return bindings
 
-    async def update_text(self, patch) -> None:
+    def update_text(self, patch) -> None:
         """
         Apply patch to internal document and update
         TextEdit window buffer.
