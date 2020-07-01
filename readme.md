@@ -1,9 +1,35 @@
-Daniil Zakhlystov
 
-**Multi-user text editor - client app.**
+<h1 align="center">
+  <br>
+  Multitext Client
+  <br>
+</h1>
 
-Connects to the server by ip address and port specified in launch parameters.
-Requires python 3.7 or higher. Cross-platform.
+<h4 align="center">CRDT-based multi-user collaborative console text editor written in Python.</h4>
+
+<p align="center">
+  <img src="./resources/demo.gif" alt="Demonstration">
+</p>
+
+## How To Use
+
+Firstly, make sure that you have [multitext-server](https://github.com/usernamedt/multitext-server) up and running.
+
+To clone and run this application, you'll need Git and Python 3.7+ installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/usernamedt/multitext-client
+
+# Go into the repository
+$ cd multitext-client
+
+# Install dependencies
+$ pip3 install -r requirements.txt
+
+# Run the app
+$ python3 launch.py -i multitext.server.ip.address -p port
+```
 
 On the launch, you will be asked to log in with existing account or create a
  new one.
@@ -23,18 +49,6 @@ If you want to share the file with
     
 To save file, choose File > Save in menu
 
-**Usage:**
+## License
 
-launch.py [-h] [-i IP] [-p PORT]
-
-optional arguments:
-
-  -h, --help            show help message
-  
-  -i IP, --ip IP        destination server ip
-  
-  -p PORT, --port PORT  destination server port
-
-**Launch sample:**
-
-python launch.py -i 127.0.0.1 -p 8080
+MIT
